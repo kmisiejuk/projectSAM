@@ -17,6 +17,29 @@ a {
   text-decoration: none;
   color: #00b7ff;
 }
-.active{
+.active {
   font-weight: bold;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: #606060;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+button {
+  margin: 20px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+button a {
+  color: #252424;
+  text-transform: uppercase;
 }

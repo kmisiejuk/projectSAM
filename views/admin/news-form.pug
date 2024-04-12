@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  h1= title
+
+    //- if errors.errors !== undefind
+    //- each message in errors.errors 
+        //- p=message
+
+  form(method='post')
+    p
+        label Tytuł
+        input(type='text' name='title' id='title')
+        //- value=body.title || ""
+    p
+        label Opis
+        textarea(name="description", cols="30", rows="10" id='description')
+        //- =body.title || ""
+    p
+        input(type='submit')
