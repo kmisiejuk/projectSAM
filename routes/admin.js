@@ -32,9 +32,8 @@ router.post('/news/add', async (req, res) => {
 
   try {
     const newsData = new News(body)
-    const errors = newsData.validateSync() // Synchronous validation
     await newsData.save()
-    res.redirect('/admin') // Przekierowanie po udanym zapisie
+    res.redirect('/admin/index') // Przekierowanie po udanym zapisie
   } catch (error) {
     console.error(error)
     res.status(500).send('Wystąpił błąd podczas zapisywania danych.')
@@ -44,7 +43,7 @@ router.post('/news/add', async (req, res) => {
 router.get('/news/delete/:id', async (req, res) => {
   try {
     await News.findByIdAndDelete(req.params.id);
-    res.redirect("/admin");
+    res.redirect("/admin/index");
   } catch (err) {
     console.error(err);
     res.status(500).send('Wystąpił błąd podczas usuwania danych.');

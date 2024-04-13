@@ -50,3 +50,11 @@ button a {
   color: #252424;
   text-transform: uppercase;
 }
+.quiz-list {
+  transition: font-weight 0.3s;
+}
+.quiz-list:hover {
+  font-weight: bold;
+  transform: translateX(0%);
+}
+
